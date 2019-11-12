@@ -12,9 +12,8 @@ import { Hero } from '../hero';
 })
 export class HeroDetailComponent implements OnInit {
 
-  //old var set by HeroComponent
-  //@Input() hero: Hero;
-  hero: Hero;
+  @Input() hero: Hero;
+  //hero: Hero;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,6 +29,11 @@ export class HeroDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id'); // the (+) operator converts a string to a number
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
   }
 
   goBack(): void {
