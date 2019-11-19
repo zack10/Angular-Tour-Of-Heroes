@@ -5,13 +5,13 @@ import { HeroService } from '../hero.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  
+
   heroes: Hero[] = [];
   step: number;
-  maxGrid: number =  12;
+  maxGrid = 12;
 
   constructor(private heroService: HeroService) { }
 
@@ -21,13 +21,14 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => { 
+      .subscribe(heroes => {
         this.heroes = heroes.slice(1, 5);
-        if(this.heroes.length > 0)
+        if (this.heroes.length > 0) {
           this.step = this.maxGrid / this.heroes.length;
-        else
+        } else {
           this.step = 4;
+        }
       }
-    );
+      );
   }
 }
