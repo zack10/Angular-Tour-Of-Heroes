@@ -1,13 +1,24 @@
 <h2>My Heroes</h2>
 
 <div>
-  <label>Hero name:
+  <!--label>Hero name:
     <input #heroName />
-  </label>
+  </label-->
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
+  <!--button (click)="add(heroName.value); heroName.value=''">
     add
-  </button>
+  </button-->
+  <div class="row">
+    <div class="col-md-2">
+      <div class="input-group mb-3">
+          <input #heroName type="text" class="form-control" placeholder="Hero name to add" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2"  (click)="add(heroName.value); heroName.value=''"><fa-icon [icon]="faPlus"></fa-icon></button>
+          </div>
+        </div>
+    </div>
+  </div>
+
 </div>
 
 <ul class="heroes">

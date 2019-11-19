@@ -1,11 +1,44 @@
-<div *ngIf="hero">
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
+<div  class="row" *ngIf="hero">
+
+  <div class="col-md-4">
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <!--div><span>id: </span>{{hero.id}}</div>
+    <div class="form-group">
+      <label>name:
+        <input type="text" class="form-control"  [(ngModel)]="hero.name" placeholder="name" />
+      </label>
+    </div>
+
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button-->
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Back</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p class="form-control-static"> {{hero.id}} </p>
+          </td>
+          <td>
+            <input ype="text" class="form-control"  [(ngModel)]="hero.name" placeholder="name" >
+          </td>
+          <td>
+            <button (click)="goBack()">go back</button>
+          </td>
+          <td>
+            <button (click)="save()">save</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -12,6 +13,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroSearchComponent implements OnInit {
 
+  faSearch =  faSearch;
   heroes$: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 

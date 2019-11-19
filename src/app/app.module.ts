@@ -12,6 +12,10 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     HttpClientModule,
     HttpClientModule,
+    FontAwesomeModule
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -38,4 +44,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    library.add(faSearch, faPlus);
+  }
+}

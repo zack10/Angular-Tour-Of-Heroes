@@ -4,6 +4,7 @@ import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-heroes',
@@ -14,6 +15,7 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
+  faPlus = faPlus;
   //selectedHero: Hero; removes dead code
   
   //inject this : (private messageService: MessageService) Here
