@@ -37,3 +37,7 @@
     margin-top: -1em;
     padding-left: 0;
   }
+
+  .search-input {
+    width: 15em;
+  }

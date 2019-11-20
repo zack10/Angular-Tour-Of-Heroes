@@ -71,3 +71,7 @@ button.delete {
   background-color: gray !important;
   color: white;
 }
+
+.add-input {
+  width: 14.4em;
+}
