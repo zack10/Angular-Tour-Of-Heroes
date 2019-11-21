@@ -36,6 +36,7 @@
   ul.search-result {
     margin-top: -1em;
     padding-left: 0;
+    width: 12.5em;
   }
 
   .search-input {
