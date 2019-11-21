@@ -2,7 +2,7 @@ import { Component, OnInit , Input} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { HeroService }  from '../hero.service';
+import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
 
 @Component({
@@ -13,7 +13,8 @@ import { Hero } from '../hero';
 export class HeroDetailComponent implements OnInit {
 
   @Input() hero: Hero;
-  //hero: Hero;
+  returnedHero: string;
+  // hero: Hero;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,16 +25,21 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getHero();
   }
-  
+
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id'); // the (+) operator converts a string to a number
     this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+      .subscribe(hero => {
+        this.returnedHero = hero.name;
+        this.hero = hero;
+      });
   }
 
   save(): void {
-    this.heroService.updateHero(this.hero)
+    if (this.hero.name !== this.returnedHero) {
+      this.heroService.updateHero(this.hero)
       .subscribe(() => this.goBack());
+    }
   }
 
   goBack(): void {
