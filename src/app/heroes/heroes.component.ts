@@ -16,16 +16,16 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
   faPlus = faPlus;
-  //selectedHero: Hero; removes dead code
-  
-  //inject this : (private messageService: MessageService) Here
+  // selectedHero: Hero; removes dead code
+
+  // inject this : (private messageService: MessageService) Here
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
   }
 
-  /**** 
+  /****
    * @Removing dead code
    */
   /*onSelect(hero: Hero): void {
