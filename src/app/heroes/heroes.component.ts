@@ -49,7 +49,7 @@ export class HeroesComponent implements OnInit {
   }
 
   delete(hero: Hero): void {
-    if (confirm('Are you sure you want delete Hero : ' + hero.name)){
+    if (confirm('Are you sure you want delete Hero : ' + hero.name)) {
       this.heroes = this.heroes.filter(h => h !== hero);
       this.heroService.deleteHero(hero).subscribe();
     }

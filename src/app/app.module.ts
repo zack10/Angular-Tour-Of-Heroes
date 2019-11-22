@@ -15,7 +15,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSearch, faPlus, faMask, faCheckSquare, faCheckCircle, faBackward, faChevronCircleLeft, faTrashAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faPlus, faMask, faCheckSquare, faCheckCircle,
+  faBackward, faChevronCircleLeft, faTrashAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
