@@ -66,12 +66,25 @@ button:hover {
 
 button.delete {
   position: relative;
-  left: 194px;
-  top: -41px;
-  background-color: gray !important;
-  color: white;
+  left: 11.8em;
+  top: -2.8em;
+  color: #ce0d1f;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  height: 2.6em;
+  /* border-radius: 0.8em; */
+}
+
+button.delete:hover {
+  background-color: #dc354542;
 }
 
 .add-input {
   width: 14.4em;
 }
+
+/*.times-circle {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}*/

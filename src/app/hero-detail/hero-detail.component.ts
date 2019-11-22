@@ -1,6 +1,7 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { faCheckSquare, faCheckCircle, faBackward, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
@@ -12,6 +13,10 @@ import { Hero } from '../hero';
 })
 export class HeroDetailComponent implements OnInit {
 
+  faCheckSquare = faCheckSquare;
+  faCheckCircle = faCheckCircle;
+  faBackward = faBackward;
+  faChevronCircleLeft = faChevronCircleLeft;
   @Input() hero: Hero;
   returnedHero: string;
   // hero: Hero;

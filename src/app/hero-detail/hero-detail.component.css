@@ -21,10 +21,12 @@ label {
     border-radius: 4px;
     cursor: pointer;
     cursor: hand;
-    margin-right: -0.6em;
     margin-top: 0px;
     margin-bottom: 20px;
+    font-weight: bolder;
+    width: 7em;
   }
+  
   button:hover {
     background-color: #cfd8dc;
   }

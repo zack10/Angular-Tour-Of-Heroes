@@ -4,7 +4,7 @@ import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-heroes',
@@ -16,6 +16,7 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
   faPlus = faPlus;
+  faTimesCircle = faTimesCircle;
   // selectedHero: Hero; removes dead code
 
   // inject this : (private messageService: MessageService) Here
@@ -48,8 +49,10 @@ export class HeroesComponent implements OnInit {
   }
 
   delete(hero: Hero): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero).subscribe();
+    if (confirm('Are you sure you want delete Hero : ' + hero.name)){
+      this.heroes = this.heroes.filter(h => h !== hero);
+      this.heroService.deleteHero(hero).subscribe();
+    }
   }
 
 }

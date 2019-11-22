@@ -30,10 +30,10 @@
             <input type="text" class="form-control"  [(ngModel)]="hero.name" placeholder="name" >
           </td>
           <td>
-            <button (click)="goBack()">go back</button>
+            <button (click)="goBack()">go back <fa-icon [icon]="faChevronCircleLeft"></fa-icon></button>
           </td>
           <td>
-            <button (click)="save()">save</button>
+            <button (click)="save()">save <fa-icon [icon]="faCheckCircle"></fa-icon></button>
           </td>
         </tr>
       </tbody>
