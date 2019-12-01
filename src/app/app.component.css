@@ -27,5 +27,8 @@ nav a.active {
   color: #039be5;
 }
 .heroes-container {
-  margin-top: 100px;
+  margin-top: 6em;
+}
+.content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }

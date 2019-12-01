@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faPlus, faMask, faCheckSquare, faCheckCircle,
   faBackward, faChevronCircleLeft, faTrashAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { faSearch, faPlus, faMask, faCheckSquare, faCheckCircle,
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
